@@ -11,8 +11,7 @@ import UIKit
 final class AppCoordinator: Coordinator {
     
     var childCoordinators: [Coordinator] = []
-    
-    private var navigationController: UINavigationController!
+    var navigationController: UINavigationController
     
     var isLoggedIn: Bool = false
     

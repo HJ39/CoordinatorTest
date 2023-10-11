@@ -15,7 +15,7 @@ protocol ViewCoordinatorProtocol {
 final class ViewCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     
-    private var navigationController: UINavigationController?
+    var navigationController: UINavigationController
     var delegate: ViewCoordinatorProtocol?
     
     init(navigationController: UINavigationController) {
@@ -27,7 +27,7 @@ final class ViewCoordinator: Coordinator {
         viewController.delegate = self
         viewController.view.backgroundColor = .brown
 //        navigationController?.pushViewController(viewController, animated: true)
-        navigationController?.viewControllers = [viewController]
+        navigationController.viewControllers = [viewController]
     }
     
     

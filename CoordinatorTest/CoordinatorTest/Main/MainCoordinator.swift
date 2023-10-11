@@ -15,7 +15,7 @@ protocol MainCoordinatorProtocol {
 final class MainCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     
-    private var navigationController: UINavigationController
+    var navigationController: UINavigationController
     var delegate: MainCoordinatorProtocol?
     
     
